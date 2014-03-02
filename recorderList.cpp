@@ -6,7 +6,7 @@ struct ListNode {
 	ListNode *next;
 	ListNode(int x) : val(x), next(NULL) {}
 };
-ListNode * creatNodeList(int A[],int n)
+ListNode * CreatLinkList(int A[],int n)
 {
 
 	ListNode * head=new ListNode(A[0]);
@@ -18,13 +18,18 @@ ListNode * creatNodeList(int A[],int n)
 		tail=temp;
 
 	}
-	ListNode *temp=head;
-	while(temp!=NULL)
+	
+	return head;
+}
+void PrintLinkList(ListNode  * head) 
+{
+	ListNode * temp=head;
+	while(temp)
 	{
-		cout<<temp->val<<endl;
+		cout<<temp->val<<" ";
 		temp=temp->next;
 	}
-	return head;
+	cout<<endl;
 }
 class Solution {
 public:
@@ -33,11 +38,13 @@ public:
 			return;
 		ListNode *fast;
 		ListNode *slow;
+		ListNode *slow_prior;
 		fast=slow=head;
 		//链表节点个数是奇数的标记 slow需要多走一步
 		bool symbol=true;
 		while(fast)
 		{
+			slow_prior=slow;
 			if(fast->next!=NULL)
 				fast=fast->next->next;
 			else
@@ -48,8 +55,14 @@ public:
 			slow=slow->next;
 		}
 		if(symbol)
+		{
+			slow_prior=slow;
 			slow=slow->next;
-		//reverseList(slow);
+			slow_prior->next=NULL;
+		}
+		else
+			slow_prior->next=NULL;
+		reverseList(slow);
 		ListNode *traverse=head;
 		ListNode *temp,*temp1;
 		while(traverse!=NULL&&slow!=NULL)
@@ -63,32 +76,43 @@ public:
         }
 
 	}
-		void reverseList(ListNode * head)
-		{
 
-		}
+//原地倒置链表
+void reverseList(ListNode *& head)
+{
+	if(head==NULL||head->next==NULL)
+		return ;
+	ListNode * current=head->next;
+	head->next=NULL;
+	ListNode *temp_head;
+	ListNode *temp_next;
+	while(current)
+	{
+		temp_head=head;
+		temp_next=current->next;
+		head=current;
+		current->next=temp_head;
+		current=temp_next;
+
+	}
+	
+}
+
 	};  
+
+	
 
 	int main()
 	{
 
-		int A[]={1,2,3,4,5,6,7};
+		int A[]={1,2,3,4,5,6};
 		int n=3;
 		Solution s;
-		ListNode* head=creatNodeList(A,7);
-		ListNode *temp=head;
-		while(temp)
-		{
-			cout<<temp->val<<endl;
-			temp=temp->next;
-		}
+		ListNode* head=CreatLinkList(A,6);
+		PrintLinkList(head);
 		s.reorderList(head);
-
-		while(head)
-		{
-			cout<<head->val<<endl;
-			head=head->next;
-		}
+		//s.reverseList(head);
+		PrintLinkList(head);
 		getchar();
 		return 0;
 	}
