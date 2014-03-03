@@ -15,8 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="recorderList.cpp">
+    <ClCompile Include="RemoveDuplicatesfromSortedList .cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="RemoveDuplicatesfromSortedListII.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RecorderList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveNthFromEnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveDuplicatesfromSortedArrayIIcpp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LinkList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

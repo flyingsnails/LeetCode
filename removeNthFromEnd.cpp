@@ -1,11 +1,4 @@
-#include<iostream>
-using namespace std;
-  struct ListNode {
-      int val;
-      ListNode *next;
-      ListNode(int x) : val(x), next(NULL) {}
-  };
-
+#include "LinkList.h"
 class Solution {
 public:
     ListNode *removeNthFromEnd(ListNode *head, int n) {

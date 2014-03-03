@@ -1,36 +1,5 @@
-#include<iostream>
-#include<vector>
-using namespace std;
-struct ListNode {
-	int val;
-	ListNode *next;
-	ListNode(int x) : val(x), next(NULL) {}
-};
-ListNode * CreatLinkList(int A[],int n)
-{
+#include "LinkList.h"
 
-	ListNode * head=new ListNode(A[0]);
-	ListNode * tail=head;
-	for(int i=1;i<n;i++)
-	{
-		ListNode *temp = new ListNode(A[i]);
-		tail->next=temp;
-		tail=temp;
-
-	}
-	
-	return head;
-}
-void PrintLinkList(ListNode  * head) 
-{
-	ListNode * temp=head;
-	while(temp)
-	{
-		cout<<temp->val<<" ";
-		temp=temp->next;
-	}
-	cout<<endl;
-}
 class Solution {
 public:
 	void reorderList(ListNode *head) {
@@ -102,17 +71,4 @@ void reverseList(ListNode *& head)
 
 	
 
-	int main()
-	{
-
-		int A[]={1,2,3,4,5,6};
-		int n=3;
-		Solution s;
-		ListNode* head=CreatLinkList(A,6);
-		PrintLinkList(head);
-		s.reorderList(head);
-		//s.reverseList(head);
-		PrintLinkList(head);
-		getchar();
-		return 0;
-	}
+	

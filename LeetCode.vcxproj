@@ -62,7 +62,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="recorderList.cpp" />
+    <ClCompile Include="RecorderList.cpp" />
+    <ClCompile Include="RemoveDuplicatesfromSortedArrayIIcpp.cpp" />
+    <ClCompile Include="RemoveDuplicatesfromSortedList .cpp" />
+    <ClCompile Include="RemoveDuplicatesfromSortedListII.cpp" />
+    <ClCompile Include="RemoveNthFromEnd.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LinkList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
