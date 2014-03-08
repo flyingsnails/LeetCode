@@ -62,11 +62,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BestTimetoBuyandSellStock.cpp" />
+    <ClCompile Include="Combination.cpp" />
+    <ClCompile Include="MedianofTwoSortedArrays.cpp" />
     <ClCompile Include="RecorderList.cpp" />
     <ClCompile Include="RemoveDuplicatesfromSortedArrayIIcpp.cpp" />
     <ClCompile Include="RemoveDuplicatesfromSortedList .cpp" />
     <ClCompile Include="RemoveDuplicatesfromSortedListII.cpp" />
     <ClCompile Include="RemoveNthFromEnd.cpp" />
+    <ClCompile Include="RotateList.cpp" />
+    <ClCompile Include="SingleNumber.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkList.h" />
